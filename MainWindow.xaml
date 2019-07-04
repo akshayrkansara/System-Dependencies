@@ -1,0 +1,28 @@
+﻿ <!--Akshay, Tyler, Anil, Shubham-->
+    <Window x:Class="System_Dependencies.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:System_Dependencies"
+        mc:Ignorable="d"
+        Title="System Dependencies" Height="450" Width="625" WindowStartupLocation="CenterScreen" Icon="depen.jpg">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="depback.png" Opacity=".4" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions >
+        <ListBox Name="lbxDisplay" Grid.Row="0" ItemsSource="{Binding OutputDisplay}" Opacity=".8"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Name="btnOpenFile" Content="Open File" Margin="10" Click="btnOpenFile_Click" Opacity=".8"/>
+            <Button Grid.Column="1" Name="btnClose" Content="Close" Margin="10" Click="btnClose_Click" Opacity=".8"/>
+        </Grid>
+    </Grid>
+</Window>
